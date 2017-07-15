@@ -1,0 +1,48 @@
+.funilm{
+  font-size: 10px;
+}
+.colorlug{
+   background-color: #151415;
+}
+.titulo{
+  background-color: #363536;
+}
+
+.item-md ion-avatar, .item-ios ion-avatar {
+  height: 40%;
+  width: 40%;
+  right: 10%;
+  
+
+  img {
+    height: 100%;
+    width: 100%;
+    border-radius: 0!important;
+  }
+}
+.item-md ion-card-title{
+  font-weight: normal;
+    text-transform: none;
+    color: #fff;
+    font-size: 70%;
+}
+.item-ios ion-card-title{
+  font-weight: normal;
+  text-transform: none;
+  color: #fff;
+  font-size: 70%;
+  
+}
+.item-md span{
+  font-weight: normal;
+    text-transform: none;
+    color: #fff;
+    font-size: 60%;
+}
+.item-ios span {
+  font-weight: normal;
+  text-transform: none;
+  color: #fff;
+  font-size: 60%;
+  
+}

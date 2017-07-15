@@ -1,0 +1,44 @@
+<ion-header >
+  <ion-toolbar color="lugar">
+    <ion-title>
+      Places
+    </ion-title>
+    <button ion-button  menuToggle color="light">
+        <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="cadastrol()">
+        <ion-icon name="add"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="filtrol()">
+      <ion-icon name="ios-funnel" class="funilm"></ion-icon>
+    </button>
+  </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding class="colorlug">
+  <ion-list *ngFor="let place of places | async | values | category: category">
+
+    <ion-item class="titulo">
+      <ion-avatar item-start >
+          <img  src="assets/lugar.jpg" />  
+         </ion-avatar>
+        <ion-card-title >
+          {{ place.name }}<br>
+          {{ place.category }}<br>
+        </ion-card-title>
+        <span >
+      {{ place.endereco }}<br>
+      {{ place.phone }}
+        </span>
+   <button class="rute" ion-button block outline color= "light" (click)="openPage(place)" >
+     Rate
+   </button>
+    
+
+    </ion-item>
+  </ion-list>
+</ion-content>
+

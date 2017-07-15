@@ -1,0 +1,48 @@
+<ion-header >
+  <ion-toolbar color="medico">
+    <ion-title>
+      Health Professionals
+    </ion-title>
+      <button ion-button  menuToggle color="light">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-buttons end>
+      <button ion-button icon-only (click)="cadastrom()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+    <button ion-button icon-only (click)="filtrom()">
+      <ion-icon name="ios-funnel" class="funil"></ion-icon>
+    </button>
+    </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding class="colormed" >
+   <ion-list *ngFor="let professional of professionals | async | values | category:currentCategory" >
+    
+     <ion-item class="corcard" >
+       
+         <ion-avatar item-start >
+          <img  src="assets/saude.jpg" />  
+         </ion-avatar>
+      
+          <ion-card-title >
+           {{ professional.name }}<br>
+          {{ professional.categoria }}<br>
+          </ion-card-title>
+         
+            <span class="paragrafo">
+             {{ professional.address }}<br>
+            {{ professional.phone }}<br>
+          
+            </span>
+   <button class="rute" ion-button block outline color= "light" (click)="openPage(professional)"  >
+     Rate
+   </button>
+   
+     </ion-item>
+  </ion-list>    
+</ion-content>
+
+

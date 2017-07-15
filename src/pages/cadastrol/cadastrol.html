@@ -1,0 +1,57 @@
+<ion-header >
+  <ion-toolbar color="lugar">
+    <ion-title class="register">
+      Register Places
+    </ion-title>
+      <button ion-button  menuToggle color="light">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding class="conteudol">
+  <div class="namel">
+  <ion-item>
+    <ion-input type="text" placeholder="Name:" [(ngModel)]="novoLugar.name"></ion-input>
+</ion-item>
+</div>
+<div class="categorial">
+  <ion-item>
+  <ion-label>Category</ion-label>
+  <ion-select [(ngModel)]="novoLugar.category">
+   <ion-option value="Bar">Bar	</ion-option>
+    <ion-option value="Cinema">Cinema</ion-option>
+    <ion-option value="Street">Street	</ion-option>
+    <ion-option value="Neighborhood">Neighborhood	</ion-option>
+    <ion-option value="City">City	</ion-option>
+    <ion-option value="State">State </ion-option>
+    <ion-option value="Country">Country	</ion-option>
+    <ion-option value="Theater">Theater	</ion-option>
+    <ion-option value="Park">Park	</ion-option>
+    <ion-option value="Health club">Health club </ion-option>
+    <ion-option value="Restaurant">Restaurant </ion-option>
+    <ion-option value="Square">Square </ion-option>
+    <ion-option value="Beauty salon">Beauty salon </ion-option>
+    <ion-option value="Show House">Show House	</ion-option>
+    <ion-option value="University">University </ion-option>
+    <ion-option value="School">School </ion-option>
+    <ion-option value="Shopping">Shopping </ion-option>
+    <ion-option value="Store">Store </ion-option>
+    <ion-option value="Bookstore">Bookstore </ion-option>
+    <ion-option value="Ice cream shop">Ice cream shop </ion-option>
+    <ion-option value="Others">Others </ion-option>
+  </ion-select>
+</ion-item>
+</div>
+<div class="enderecol">
+<ion-item>
+  <ion-input type="text" placeholder="Adress:" [(ngModel)]="novoLugar.endereco"></ion-input>
+</ion-item>
+</div>
+<div class="phonel">
+<ion-item>
+  <ion-input type="text" placeholder="Phone:" [(ngModel)]="novoLugar.phone"></ion-input>
+</ion-item>
+</div>
+<button  ion-button block outline color="light" (click)="addPlace()">Save</button>
+ <button  ion-button block outline color="light" (click)="lugares()">Return</button>
+</ion-content>

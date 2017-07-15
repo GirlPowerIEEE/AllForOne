@@ -1,0 +1,28 @@
+
+   
+   
+   
+    <ion-content  class="background">
+   <img  src="assets/logo.png" class="logo"/>
+    <ion-card-content>
+      <ion-list no-line>
+        <div class="loginemail">
+            <ion-item>
+              <ion-input type="text" placeholder="Email:" [(ngModel)]="email"></ion-input>
+            <!--  <span class="assertive" ng-show="formLogin.email.$invalid && formLogin.email.$dirty">Preencha o campo email corretamente!</span>-->
+          </ion-item>
+        </div>
+        <div class="loginsenha">
+            <ion-item>
+              <ion-input type="password"placeholder="Password:" [(ngModel)]="password"></ion-input>
+            </ion-item>
+        </div>
+      </ion-list>
+      <button class="blogin" ion-button block outline color="light" (click)="login()">Login in</button>
+      <p>OR</p>
+      <button ion-button block color="facebook" (click)="showAlert()">
+        <ion-icon nome="logo-facebook"></ion-icon>Login with Facebook 
+      </button>
+    </ion-card-content>
+  <p>don't have an account? <a (click)="cadastro();"><b>Sign up</b></a> </p>
+</ion-content>

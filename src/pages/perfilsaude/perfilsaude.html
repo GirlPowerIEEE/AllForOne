@@ -1,0 +1,35 @@
+<ion-content  class="fundoperfil" >
+   
+ <ion-navbar color="perfil">
+   
+  </ion-navbar>
+  <img  src="assets/perfilsaude.jpg" /> 
+
+<h2 class="paragrafo1">
+{{ professional.name }}
+</h2>
+<h2 class="paragrafo2">{{ professional.category }}<br></h2>
+<span class="address"> 
+{{ professional.address }}<br>
+ {{ professional.phone }}<br>
+ </span>
+<label class="yelow">Rating:{{ getAverageRate() }}<br></label>
+
+<div class="botaoperfil">
+
+  <button  ion-button icon-left outline color="light" (click)="rate()"  >
+      <ion-icon name="star"></ion-icon>
+     Rate
+  </button>
+  
+  
+</div>
+  
+
+  <ion-list padding >
+    <ion-item class="lista"outline color="dark" *ngFor="let rating of professional.ratings | values">
+      <label class="yelow">  Rate: {{ rating.rate }} <br></label>
+      Comment: {{ rating.comment }}
+    </ion-item>
+  </ion-list>
+</ion-content>

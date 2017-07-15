@@ -1,0 +1,67 @@
+<ion-header >
+  <ion-toolbar color="medico">
+    <ion-title>
+      Register Health 
+    </ion-title>
+      <button ion-button  menuToggle color="light">
+        <ion-icon name="menu"></ion-icon>
+      </button>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding class="conteudo">
+  <div class="namem">
+  <ion-item>
+    <ion-input type="text" placeholder="Name:" [(ngModel)]="novo.name"></ion-input>
+</ion-item>
+</div>
+<div class="categoriam">
+  <ion-item>
+  <ion-label>Category</ion-label>
+  <ion-select [(ngModel)]="novo.category">
+      <ion-option value="Acupuncture">Acupuncture	</ion-option>
+    <ion-option value="Allergy">Allergy </ion-option>
+    <ion-option value="Angiology">Angiology	</ion-option>
+    <ion-option value="Cardiology">Cardiology	</ion-option>
+    <ion-option value="General Practitioner">General Practitioner </ion-option>
+    <ion-option value="Coloproctology ">Coloproctology </ion-option>
+    <ion-option value="Dermatology">Dermatology </ion-option>
+    <ion-option value="Endocrinology">Endocrinology </ion-option>
+    <ion-option value="Physiatry">Physiatry	</ion-option>
+    <ion-option value="Physiotherapy">Physiotherapy	 </ion-option>
+    <ion-option value="Speech therapy ">Speech therapy </ion-option>
+    <ion-option value="Gastroenterology">Gastroenterology	</ion-option>
+    <ion-option value="Geriatrics">Geriatrics </ion-option>
+    <ion-option value="Homeopathy">Homeopathy	</ion-option>
+    <ion-option value="Infectology	">Infectology	</ion-option>
+    <ion-option value="Nephrology">Nephrology </ion-option>
+    <ion-option value="Nutrition">Nutrition </ion-option>
+    <ion-option value="Nutrology">Nutrology	</ion-option>
+    <ion-option value="Dentistry">Dentistry	</ion-option>
+    <ion-option value="Ophthalmology">Ophthalmology	</ion-option>
+    <ion-option value="Oncology">Oncology </ion-option>
+    <ion-option value="Orthopedics and Traumatology">Orthopedics and Traumatology </ion-option>
+    <ion-option value="Otolaryngology">Otolaryngology </ion-option>
+    <ion-option value="Pediatrics">Pediatrics </ion-option>
+    <ion-option value="Pulmonology">Pulmonology </ion-option>
+    <ion-option value="Psychology">Psychology </ion-option>
+    <ion-option value="Psychopedagogy">Psychopedagogy	 </ion-option>
+    <ion-option value="Psychiatry">Psychiatry </ion-option>
+    <ion-option value="Rheumatology">Rheumatology	</ion-option>
+    <ion-option value="Urology">Urology </ion-option>
+    <ion-option value="Others">Others </ion-option>
+  </ion-select>
+</ion-item>
+</div>
+<div class="endereco">
+<ion-item>
+  <ion-input type="text" placeholder="Adress:" [(ngModel)]="novo.address"></ion-input>
+</ion-item>
+</div>
+<div class="phone">
+<ion-item>
+  <ion-input type="text" placeholder="Phone:" [(ngModel)]="novo.phone"></ion-input>
+</ion-item>
+</div>
+  <button  ion-button block outline color="light" (click)="addProfessional()" >Save</button>
+  <button  ion-button block outline color="light" (click)="medicos()">Return</button>
+</ion-content>

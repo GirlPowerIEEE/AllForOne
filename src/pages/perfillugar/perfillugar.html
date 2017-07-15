@@ -1,0 +1,37 @@
+
+
+<ion-content  class="lugarperfil" >
+   
+ <ion-navbar color="lugar">
+   
+  </ion-navbar>
+  <img  src="assets/perfillugar.jpg" /> 
+
+<h2 class="nameh">
+{{ place.name }}<br>
+</h2>
+<h2 class="categoriah" >{{ place.categoria }}<br></h2>
+<span class="phoneh">
+{{ place.category }}<br>
+ {{ place.phone }}<br>
+ </span>
+<label class="paragrafolugar">Rating:{{ getAverageRate() }}<br></label>
+<div class="botaolugar">
+
+  <button  ion-button icon-left outline color="light" (click)="rate()"  >
+      <ion-icon name="star"></ion-icon>
+     Rate
+  </button>
+
+</div>
+  
+
+  <ion-list padding >
+    <ion-item class="lista"outline color="dark" *ngFor="let rating of place.ratings | values">
+     <label class="paragrafolugar"> Rate: {{ rating.rate }} <br></label>
+      Comment: {{ rating.comment }}
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+

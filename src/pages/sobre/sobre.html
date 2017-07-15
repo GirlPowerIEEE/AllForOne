@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button outline menuToggle color="dark">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <div class="logosobre"></div>
+  </ion-navbar>
+</ion-header>
+
+<ion-content class="sobreimg">
+  <ion-list>
+    <button ion-item *ngFor="let item of items" (click)="sobre()">
+      <ion-icon item-left name="ios-flower-outline"></ion-icon>
+      {{item.title}}
+      <div class="item-note" item-right>
+        {{item.note}}
+      </div>
+    </button>
+  </ion-list>
+  <div *ngIf="selectedItem" padding>
+    You navigated here from <b>{{selectedItem.title}}</b>
+  </div>
+  <div >
+    </div>
+</ion-content>
